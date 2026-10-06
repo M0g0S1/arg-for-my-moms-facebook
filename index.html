@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SECURE ACCESS TERMINAL</title>
+  <meta name="theme-color" content="#050505">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" class="crt">
+    <div id="scanlines"></div>
+    <header class="topbar">
+      <div>
+        <div class="brand">SECURE ACCESS TERMINAL</div>
+        <div class="build" id="buildLine">build 5.1.09 // maintenance branch</div>
+      </div>
+      <div class="telemetry">
+        <span id="connState">CONNECTION: ESTABLISHED</span>
+        <span id="sessionState">SESSION: 7F4A-91C2</span>
+        <span id="channelState">CHANNEL: ENCRYPTED</span>
+      </div>
+    </header>
+
+    <section class="terminal-wrap">
+      <div id="terminal" class="terminal" tabindex="0" aria-label="Interactive terminal">
+        <div id="output" class="output" aria-live="polite"></div>
+        <div class="input-row">
+          <span class="prompt" id="prompt">guest@terminal:/system$</span>
+          <input id="commandInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Command input">
+        </div>
+      </div>
+    </section>
+
+    <footer class="bottombar">
+      <div id="footerLeft">AUTHENTICATION REQUIRED</div>
+      <div id="footerRight">TYPE <b>help</b> FOR BASICS</div>
+    </footer>
+
+    <div id="anomaly" class="anomaly hidden" aria-hidden="true"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
